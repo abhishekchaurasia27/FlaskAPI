@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Book!</title>
+</head>
+<body>
+   <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend>Create New Book!!!</legend>
+                <div >
+                    {{ form.name.label(class="form-control-label") }}
+
+                    {% if form.name.errors %}
+                        {{ form.name(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div >
+                    {{ form.isbn.label(class="form-control-label") }}
+
+                    {% if form.isbn.errors %}
+                        {{ form.isbn(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.isbn.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.isbn(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div >
+                    {{ form.authors.label(class="form-control-label") }}
+
+                    {% if form.authors.errors %}
+                        {{ form.authors(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.authors.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.authors(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div >
+                    {{ form.country.label(class="form-control-label") }}
+
+                    {% if form.country.errors %}
+                        {{ form.country(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.country.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.country(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div >
+                    {{ form.numberOfPages.label(class="form-control-label") }}
+
+                    {% if form.numberOfPages.errors %}
+                        {{ form.numberOfPages(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.numberOfPages.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.numberOfPages(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div >
+                    {{ form.publisher.label(class="form-control-label") }}
+
+                    {% if form.publisher.errors %}
+                        {{ form.publisher(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.publisher.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.publisher(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div >
+                    {{ form.release.label(class="form-control-label") }}
+
+                    {% if form.release.errors %}
+                        {{ form.release(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.release.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.release(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
